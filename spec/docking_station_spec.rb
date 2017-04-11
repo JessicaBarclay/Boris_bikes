@@ -33,8 +33,7 @@ describe DockingStation do
       describe "#dock" do
         it "Should return the maximum number of bikes" do
            20.times { subject.dock Bike.new }
-          expect { subject.dock Bike.new }.to raise_error "Maximum number of bikes"
-          #expect { subject.dock Bike.new }.to raise_error 'Docking station full'
+          expect { subject.dock Bike.new }.to raise_error "Docking station full"
         end
       end
 
